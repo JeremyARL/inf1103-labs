@@ -11,6 +11,7 @@ def load_inventory():
 inventory = load_inventory()
 failed_entries = 0
 deliveries_processed = 0
+transaction_history = []
 
 
 def get_valid_input():
@@ -60,6 +61,8 @@ while True:
         continue
 
     inventory = process_delivery(inventory, stock)
+    transaction_history.append(stock)
+
 
     tax = calculate_tax(stock)
     print("Tax:", tax)
