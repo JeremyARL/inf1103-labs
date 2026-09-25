@@ -1,17 +1,27 @@
 def load_inventory():
     try:
         with open("inventory.txt", "r") as file:
-            inventory = int(file.readline().strip())
-            return inventory
+            lines = file.readlines()
+
+            inventory = int(lines[0].strip())
+
+            transaction_history = []
+
+            for line in lines[1:]:
+                transaction_history.append(int(line.strip()))
+
+            return inventory, transaction_history
 
     except FileNotFoundError:
-        return 0
+        return 0, []
 
 
-inventory = load_inventory()
-failed_entries = 0
-deliveries_processed = 0
-transaction_history = []
+def save_inventory(inventory, transaction_history):
+    with open("inventory.txt", "w") as file:
+        file.write(str(inventory) + "\n")
+
+        for transaction in transaction_history:
+            file.write(str(transaction) + "\n")
 
 
 def get_valid_input():
@@ -49,10 +59,17 @@ def generate_report(total_units, failed_attempts):
     print("Number of Failed/Rejected Entries:", failed_attempts)
 
 
+inventory, transaction_history = load_inventory()
+
+failed_entries = 0
+deliveries_processed = 0
+
+
 while True:
     stock = get_valid_input()
 
     if stock == "quit":
+        save_inventory(inventory, transaction_history)
         generate_report(deliveries_processed, failed_entries)
         break
 
@@ -61,8 +78,8 @@ while True:
         continue
 
     inventory = process_delivery(inventory, stock)
-    transaction_history.append(stock)
 
+    transaction_history.append(stock)
 
     tax = calculate_tax(stock)
     print("Tax:", tax)
@@ -71,4 +88,5 @@ while True:
 
     if inventory > 500:
         print("Alert: Inventory exceeds storage capacity!")
+        save_inventory(inventory, transaction_history)
         break
