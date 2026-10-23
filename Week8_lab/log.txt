@@ -1,0 +1,23 @@
+commit 7c50c9eb53558c31407176a7df1d516c61fb02d5
+Author: Jeremy Ang <2603019@sit.singaporetech.edu.sg>
+Date:   Fri Oct 23 21:47:42 2026 +0800
+
+    Complete OOP inventory management system
+
+commit 4d103183ebc6f648f16f72fc0cb18d83a893c7fe
+Author: Jeremy Ang <2603019@sit.singaporetech.edu.sg>
+Date:   Fri Oct 23 21:17:43 2026 +0800
+
+    Refactor inventory management system using OOP
+
+commit 21c38297b3d35a05300bb7d644dccbccbfb196e8
+Author: Jeremy Ang <2603019@sit.singaporetech.edu.sg>
+Date:   Fri Oct 23 20:56:37 2026 +0800
+
+    Create Product class with attributes and methods
+
+commit 82f3ef7ceff4fbd97111f7751fea5a168947646b
+Author: Jeremy Ang <2603019@sit.singaporetech.edu.sg>
+Date:   Fri Oct 23 20:52:46 2026 +0800
+
+    Create Product class with attributes and methods
