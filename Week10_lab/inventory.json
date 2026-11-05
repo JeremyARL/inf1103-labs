@@ -1,0 +1,93 @@
+[
+    {
+        "id": "P001",
+        "name": "Laptop",
+        "price": 1200.0,
+        "stock": 20,
+        "supplier": {
+            "supplier_id": "S000",
+            "name": "Unassigned Supplier",
+            "contact_email": "Not provided"
+        },
+        "type": "physical",
+        "weight": 2.5
+    },
+    {
+        "id": "P002",
+        "name": "Mouse",
+        "price": 25.5,
+        "stock": 40,
+        "supplier": {
+            "supplier_id": "S000",
+            "name": "Unassigned Supplier",
+            "contact_email": "Not provided"
+        },
+        "type": "physical",
+        "weight": 0.2
+    },
+    {
+        "id": "D001",
+        "name": "Software",
+        "price": 99.0,
+        "stock": 100,
+        "supplier": {
+            "supplier_id": "S000",
+            "name": "Unassigned Supplier",
+            "contact_email": "Not provided"
+        },
+        "type": "digital",
+        "download_size": 500.0
+    },
+    {
+        "id": "P003",
+        "name": "Keyboard",
+        "price": 45.0,
+        "stock": 100,
+        "supplier": {
+            "supplier_id": "S000",
+            "name": "Unassigned Supplier",
+            "contact_email": "Not provided"
+        },
+        "type": "physical",
+        "weight": 0.8
+    },
+    {
+        "id": "D002",
+        "name": "E-book",
+        "price": 15.0,
+        "stock": 50,
+        "supplier": {
+            "supplier_id": "S000",
+            "name": "Unassigned Supplier",
+            "contact_email": "Not provided"
+        },
+        "type": "digital",
+        "download_size": 30.0
+    },
+    {
+        "id": "P900",
+        "name": "Tablet",
+        "price": 150.0,
+        "stock": 10,
+        "supplier": {
+            "supplier_id": "S001",
+            "name": "ABC Electronics",
+            "contact_email": "contact@abcelectronics.com"
+        },
+        "type": "physical",
+        "weight": 0.8
+    },
+    {
+        "id": "D900",
+        "name": "Digital Guide",
+        "price": 20.0,
+        "stock": 50,
+        "supplier": {
+            "supplier_id": "S001",
+            "name": "ABC Electronics",
+            "contact_email": "contact@abcelectronics.com"
+        },
+        "type": "digital",
+        "download_size": 25.0
+    }
+]
