@@ -1,3 +1,4 @@
+
 from abc import ABC, abstractmethod
 
 from supplier import Supplier
@@ -12,6 +13,12 @@ class Product(ABC):
         stock: int,
         supplier: Supplier
     ) -> None:
+        if price <= 0:
+            raise ValueError("Price must be greater than zero.")
+
+        if stock < 0:
+            raise ValueError("Stock cannot be negative.")
+
         self.__product_id: str = product_id
         self.__name: str = name
         self.__price: float = price
@@ -27,6 +34,9 @@ class Product(ABC):
         return self.__supplier
 
     def update_stock(self, quantity: int) -> None:
+        if quantity < 0:
+            raise ValueError("Stock cannot be negative.")
+
         self.__stock = quantity
 
     def display_information(self) -> None:
@@ -41,7 +51,6 @@ class Product(ABC):
     def get_product_id(self) -> str:
         return self.__product_id
 
-
     def to_dict(self) -> dict:
         return {
             "id": self.__product_id,
@@ -50,7 +59,6 @@ class Product(ABC):
             "stock": self.__stock,
             "supplier": self.__supplier.to_dict()
         }
-
 
     @abstractmethod
     def get_fulfilment_info(self) -> str:

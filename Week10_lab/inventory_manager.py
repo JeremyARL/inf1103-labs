@@ -154,9 +154,8 @@ def main() -> None:
                 price = float(input("Price: "))
                 stock = int(input("Stock Quantity: "))
 
-                if price < 0 or stock < 0:
-                    print("Price and stock cannot be negative.")
-                    continue
+                if price <= 0 or stock < 0:
+                    print("Price must be greater than zero and stock cannot be negative.")
 
                 # --------------------------
                 # SUPPLIER ASSOCIATION
