@@ -50,6 +50,6 @@ def load_products_from_csv(file_path, inventory, supplier):
         print(f"{count} products loaded.")
 
     finally:
-        print("CSV loading finished.")
+        print("Load attempt finished.")
 
     return count

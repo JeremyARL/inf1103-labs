@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net">
   <diagram name="Page-1" id="PSqgLtrj47Gr4XphZpa9">
-    <mxGraphModel dx="1446" dy="1087" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1202" dy="814" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -203,25 +203,13 @@
             </mxGeometry>
           </mxCell>
         </UserObject>
-        <UserObject label="creates" mermaidId="e:ProductFactory-&gt;PhysicalProduct#0" mermaidBaseStyle="edgeStyle=orthogonalEdgeStyle;rounded=1;curved=0;dashed=1;startArrow=none;endArrow=classic;endSize=9;jumpStyle=arc;jumpSize=12;strokeColor=#000000;html=1;fontSize=16;labelBackgroundColor=#ffffff;fontFamily=Recursive;fontColor=#28253D;exitX=0.65;exitY=1;entryX=0.5;entryY=0;strokeWidth=2;dashPattern=2 2;fixDash=1;" mermaidBaseValue="creates" id="ygGmjRFNdwg6PefPwLVK-41">
-          <mxCell edge="1" parent="ygGmjRFNdwg6PefPwLVK-1" source="ygGmjRFNdwg6PefPwLVK-16" style="edgeStyle=orthogonalEdgeStyle;rounded=1;curved=0;dashed=1;startArrow=none;endArrow=classic;endSize=9;jumpStyle=arc;jumpSize=12;strokeColor=#000000;html=1;fontSize=14;labelBackgroundColor=#ffffff;fontFamily=Recursive;fontColor=#28253D;exitX=0.65;exitY=1;entryX=0.5;entryY=0;strokeWidth=2;dashPattern=2 2;fixDash=1;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DRecursive;" target="ygGmjRFNdwg6PefPwLVK-8">
-            <mxGeometry relative="1" as="geometry">
-              <Array as="points">
-                <mxPoint x="426" y="508" />
-                <mxPoint x="470" y="508" />
-                <mxPoint x="470" y="650" />
-                <mxPoint x="519" y="650" />
-              </Array>
-            </mxGeometry>
-          </mxCell>
-        </UserObject>
         <UserObject label="creates" mermaidId="e:ProductFactory-&gt;DigitalProduct#0" mermaidBaseStyle="edgeStyle=orthogonalEdgeStyle;rounded=1;curved=0;dashed=1;startArrow=none;endArrow=classic;endSize=9;jumpStyle=arc;jumpSize=12;strokeColor=#000000;html=1;fontSize=16;labelBackgroundColor=#ffffff;fontFamily=Recursive;fontColor=#28253D;exitX=0.35;exitY=1;entryX=0.64;entryY=0;strokeWidth=2;dashPattern=2 2;fixDash=1;" mermaidBaseValue="creates" id="ygGmjRFNdwg6PefPwLVK-42">
-          <mxCell edge="1" parent="ygGmjRFNdwg6PefPwLVK-1" source="ygGmjRFNdwg6PefPwLVK-16" style="edgeStyle=orthogonalEdgeStyle;rounded=1;curved=0;dashed=1;startArrow=none;endArrow=classic;endSize=9;jumpStyle=arc;jumpSize=12;strokeColor=#000000;html=1;fontSize=14;labelBackgroundColor=#ffffff;fontFamily=Recursive;fontColor=#28253D;exitX=0.35;exitY=1;entryX=0.64;entryY=0;strokeWidth=2;dashPattern=2 2;fixDash=1;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DRecursive;" target="ygGmjRFNdwg6PefPwLVK-10">
-            <mxGeometry relative="1" as="geometry">
+          <mxCell edge="1" parent="ygGmjRFNdwg6PefPwLVK-1" source="ygGmjRFNdwg6PefPwLVK-16" style="edgeStyle=orthogonalEdgeStyle;rounded=1;curved=0;dashed=1;startArrow=none;endArrow=classic;endSize=9;jumpStyle=arc;jumpSize=12;strokeColor=#000000;html=1;fontSize=14;labelBackgroundColor=#ffffff;fontFamily=Recursive;fontColor=#28253D;exitX=0.35;exitY=1;strokeWidth=2;dashPattern=2 2;fixDash=1;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DRecursive;">
+            <mxGeometry relative="1" x="-0.426" as="geometry">
               <Array as="points">
-                <mxPoint x="361" y="690" />
-                <mxPoint x="312" y="690" />
+                <mxPoint x="361.9" y="560" />
               </Array>
+              <mxPoint x="220" y="560" as="targetPoint" />
             </mxGeometry>
           </mxCell>
         </UserObject>
@@ -275,6 +263,12 @@
             </mxGeometry>
           </mxCell>
         </UserObject>
+        <mxCell id="ygGmjRFNdwg6PefPwLVK-48" parent="ygGmjRFNdwg6PefPwLVK-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="0..*" vertex="1">
+          <mxGeometry height="30" width="60" x="734.5" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="ygGmjRFNdwg6PefPwLVK-49" parent="ygGmjRFNdwg6PefPwLVK-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="1" vertex="1">
+          <mxGeometry height="30" width="60" x="810" y="100" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>

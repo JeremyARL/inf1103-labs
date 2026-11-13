@@ -43,7 +43,7 @@ def test_missing_csv_file(tmp_path, capsys):
 
     assert count == 0
     assert "CSV file not found." in output
-    assert "CSV loading finished." in output
+    assert "Load attempt finished." in output
 
 
 def test_invalid_price_is_skipped(tmp_path):
