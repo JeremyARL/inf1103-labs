@@ -1,8 +1,7 @@
 import json
 from pathlib import Path
 
-from physical_product import PhysicalProduct
-from digital_product import DigitalProduct
+from product_factory import ProductFactory
 from inventory import Inventory
 from supplier import Supplier
 
@@ -52,31 +51,17 @@ def load_inventory() -> Inventory:
 
                 supplier = suppliers[supplier_id]
 
-                # Create PhysicalProduct
-                if product_type == "physical":
-                    product = PhysicalProduct(
-                        item["id"],
-                        item["name"],
-                        item["price"],
-                        item["stock"],
-                        item["weight"],
-                        supplier
-                    )
-
-                # Create DigitalProduct
-                elif product_type == "digital":
-                    product = DigitalProduct(
-                        item["id"],
-                        item["name"],
-                        item["price"],
-                        item["stock"],
-                        item["download_size"],
-                        supplier
-                    )
-
-                else:
-                    print("Unknown product type. Skipping product.")
-                    continue
+                # Create product using ProductFactory
+                product = ProductFactory.create(
+                    product_type=product_type,
+                    product_id=item["id"],
+                    name=item["name"],
+                    price=item["price"],
+                    stock=item["stock"],
+                    supplier=supplier,
+                    weight=item.get("weight"),
+                    download_size=item.get("download_size")
+                )
 
                 inventory.add_product(product)
 
@@ -232,13 +217,14 @@ def main() -> None:
                         print("Weight cannot be negative.")
                         continue
 
-                    product = PhysicalProduct(
-                        product_id,
-                        name,
-                        price,
-                        stock,
-                        weight,
-                        supplier
+                    product = ProductFactory.create(
+                        product_type="physical",
+                        product_id=product_id,
+                        name=name,
+                        price=price,
+                        stock=stock,
+                        supplier=supplier,
+                        weight=weight
                     )
 
                 # --------------------------
@@ -254,13 +240,14 @@ def main() -> None:
                         print("Download size cannot be negative.")
                         continue
 
-                    product = DigitalProduct(
-                        product_id,
-                        name,
-                        price,
-                        stock,
-                        download_size,
-                        supplier
+                    product = ProductFactory.create(
+                        product_type="digital",
+                        product_id=product_id,
+                        name=name,
+                        price=price,
+                        stock=stock,
+                        supplier=supplier,
+                        download_size=download_size
                     )
 
             except ValueError:
