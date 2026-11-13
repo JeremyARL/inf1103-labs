@@ -1,0 +1,6 @@
+product_type,product_id,name,price,stock_quantity,weight,download_size
+physical,P001,Desk Lamp,25.00,10,1.5,
+digital,D001,Photo Editor,49.90,100,,250
+service,S001,Installation,30.00,5,,
+physical,P002,Office Chair,abc,3,8.0,
+physical,P003,Monitor Stand,39.50,7,2.5,

@@ -1,6 +1,6 @@
 import json
 from pathlib import Path
-
+from input_helpers import get_positive_float
 from product_factory import ProductFactory
 from inventory import Inventory
 from supplier import Supplier
@@ -151,7 +151,7 @@ def main() -> None:
                 continue
 
             try:
-                price = float(input("Price: "))
+                price = get_positive_float("Price: ")
                 stock = int(input("Stock Quantity: "))
 
                 if price <= 0 or stock < 0:
